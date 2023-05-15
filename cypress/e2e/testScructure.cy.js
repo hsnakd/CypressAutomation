@@ -14,10 +14,23 @@ describe('Context: My First Tests', () => {
     afterEach(() => {
         // similar to afterMethod in TestNG
     })
-    it.skip('Opening a web application', () => {
+    it('Opening a web application', () => {
         cy.visit('/registration_form');
     })
-    xit('Test 2', () => {
+    // skip
+    it.skip('Skipping a web application', () => {
+        cy.visit('/registration_form');
+    })
+    /* only
+    it.only('Only Opening a web application', () => {
+        cy.visit('/registration_form');
+    })
+    */
+   // close with x
+    xit('Close the Opening a web application', () => {
+        cy.visit('/registration_form');
+    })
+    it('Test 2', () => {
         expect(false).to.equal(false);
     })
     it('Test 3', () => {
