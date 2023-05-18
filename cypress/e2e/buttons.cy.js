@@ -10,12 +10,6 @@ describe('Context: My First Tests', () => {
     // select a button with text
     cy.contains('Button 2').should('be.visible').click();
     cy.contains('Clicked on button two!').should('be.visible');
-    
-    // assert message with text 
-    cy.get('#result').then((message) => {
-      expect(message).to.have.text('Clicked on button two!');
-      cy.log(message.text()); // this command write the text at the test console
-    });
 
     // find element with class attribute and create a list then select 3rd element from the list
     cy.get('.btn.btn-primary').then(($buttons) => {
@@ -35,7 +29,7 @@ describe('Context: My First Tests', () => {
     cy.get('button').each((item) => {
       if (item.text() === 'Button 4') {
         cy.log(item.text()); // this command write the text at the test console
-        // item.click(); // you cannot use cypress click func on jQuery element // The declaration was marked as deprecated here.
+        // item.click(); // you cannot use cypress click func on jQuery element
         cy.wrap(item).click();
         cy.contains('Clicked on button four!').should('be.visible');
       }
