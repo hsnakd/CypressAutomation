@@ -2,6 +2,11 @@
 npx cypress run --spec ./cypress/e2e/"FileName"
 npx cypress run --spec ./cypress/e2e/webTables.cy.js
 
+npm run cypress-cli         : "cypress open",
+npm run cypress-headed      : "cypress run -b chrome",
+npm run cypress-headless    : "cypress run --headless -b chrome",
+npm run eslint              : "eslint cypress",
+npm run eslint-fix          : "eslint cypress --fix"
 
 
 Options:
