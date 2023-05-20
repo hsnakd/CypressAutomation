@@ -1,3 +1,5 @@
+
+npx cypress run --spec ./cypress/e2e/"FileName"
 npx cypress run --spec ./cypress/e2e/webTables.cy.js
 
 
